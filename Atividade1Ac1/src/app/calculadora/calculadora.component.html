@@ -1,0 +1,19 @@
+<div class="container text-center p-4">
+
+
+  <h1>Calculadora</h1>
+  <p>Digite 1 numero:</p>
+  <input type="number" [(ngModel)]="num1" placeholder="Digite somente numero..."/>
+  <p>Digite outro numero:</p>
+  <input type="number" [(ngModel)]="num2" placeholder="Digite somente numero..."/>
+  <p>Digite o operadção matemática:</p>
+  <input type="text" [(ngModel)]="operador"/>
+  <br>
+
+  <button (click)="calcular()">Calcular</button>
+  <br>
+
+  <input class="resultado" [(ngModel)]="resultado">
+  <p>Resultado: {{ resultado }}</p>
+
+</div>
