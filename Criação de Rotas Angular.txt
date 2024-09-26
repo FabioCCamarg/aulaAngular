@@ -1,0 +1,19 @@
+Criação de Rotas Angular:
+
+1° precisa estar criado os componentes que deseja criar as rotas;
+
+2° Em "app.routing.module.ts"
+vamos criar as Rotas:
+
+ex: 
+const routes: Routes = [
+{path:'home', component: HomeComponent},
+{path:'features', component: FeaturesComponent},
+{path:'about', component: AboutComponent}
+];
+
+3° Após isso, ir no template app.component.html e inserir na tag "a" routerLink="home" e routerLinkActive="active":
+
+ex:
+
+ <a routerLink="home" routerLinkActive="active"  class="nav-link" aria-current="page">Home</a>

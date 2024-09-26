@@ -1,0 +1,18 @@
+<h1>Calcular Juros Simples</h1>
+<p>Valor Inicial</p>
+<input type="number" [(ngModel)]="capital" placeholder="Digite o valor Principal">
+
+<p>Taxa de Juros ao Ano</p>
+<input type="number" [(ngModel)]="taxa" placeholder="Digite o valor taxa anual">
+
+<p>Quantidade de Anos</p>
+<input type="number" [(ngModel)]="tempo" placeholder="Digite o valor tempo">
+<br>
+<br>
+<button (click)="juros()">Juros</button>
+<button (click)="montante()">Montante</button>
+<br>
+<h3>Resultados:</h3>
+    <p>Juros Simples: {{ jurosSimples  }}</p>
+    <p>Montante Total: {{ montanteTotal }}</p>
+

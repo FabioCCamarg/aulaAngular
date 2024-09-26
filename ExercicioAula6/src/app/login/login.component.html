@@ -1,0 +1,17 @@
+<div class="container-login">
+<div class="content-user">
+    <label for="username">Usuário:</label>
+    <input type="text" [(ngModel)]="usuarioLogin">
+  </div>
+  <div class="content-password">
+    <label for="password">Senha:</label>
+    <input type="password" [(ngModel)]="senha">
+  </div>
+  <div class="btn">
+    <button (click)="entrar()" class="btn btn-primary m-3">Entrar</button>
+
+  </div>
+  <p *ngIf="erro">{{ erro }}</p>
+  <p *ngIf="sucesso">{{ sucesso }}</p>
+
+</div>

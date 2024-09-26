@@ -1,0 +1,32 @@
+<button class="btn btn-primary" (click)="mostrarDivIf = !mostrarDivIf">{{ mostrarDivIf ? "Esconder Div": "Mostrar Div"
+  }}</button>
+<div class="row" *ngIf="mostrarDivIf">
+  <div class="col-12">
+    Conteúdo da Div - Exemplo ngIf</div>
+</div>
+
+
+<div class="row">
+  <div class="col-12">
+    <input type="text" [(ngModel)]="cidade" placeholder="digite a cidade">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th *ngFor="let coluna of colunasTable">{{ coluna }}</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of listClientes"[ngClass]="
+          {negrito: cliente.cidade.toLowerCase() == cidade.toLowerCase() }">
+          <td>{{ cliente.nome}}</td>
+          <td
+            [ngStyle]="{'background-color': cliente.cidade.toLowerCase() == cidade.toLowerCase() ? 'yellow' :'white'}">
+            {{ cliente.cidade }}</td>
+          <td>{{ cliente.celular }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

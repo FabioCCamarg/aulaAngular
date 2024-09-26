@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Tarefas</h1>
+  <ol>
+    <li *ngFor="let tarefa of listaTarefas" [ngStyle]="
+    {'text-decoration': tarefa.status ? 'line-through': ''}">{{ tarefa.descricao}} {{ tarefa.status }} <button class="btn btn-primary" *ngIf="{'text-decoration': tarefa.status  ? 'line-through': ''}" (click)="trocarStatus(tarefa)">{{ tarefa.status ? "Desfazer":"Concluir" }}</button></li>
+  </ol>
+
+
+
+</div>

@@ -1,0 +1,22 @@
+<table class="table table-bordered table-striped">
+<thead>
+  <tr>
+    <th>Id</th>
+    <th>Nome</th>
+    <th>Celular</th>
+    <th>Email</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let cliente of clientes">
+    <td> {{ cliente.id }}</td>
+    <td>{{ cliente.nome }}</td>
+    <td>{{ cliente.celular }}</td>
+    <td>{{ cliente.email }}</td>
+    <td><a class="btn btn-primary" [routerLink]="['/cliente/editar-cliente', cliente.id]">Editar</a></td>
+
+  </tr>
+
+</tbody>
+</table>

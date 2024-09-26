@@ -9,6 +9,9 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CalcularJurosSimplesComponent } from './calcular-juros-simples/calcular-juros-simples.component';
+import { FormsModule } from '@angular/forms';
+import { FeaturesComponent } from './features/features.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PostListComponent,
     PostDetailComponent,
     AboutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CalcularJurosSimplesComponent,
+    FeaturesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()

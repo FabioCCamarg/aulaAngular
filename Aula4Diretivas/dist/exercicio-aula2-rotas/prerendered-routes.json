@@ -1,0 +1,9 @@
+{
+  "routes": [
+    "/about",
+    "/calcular-juros-simples",
+    "/features",
+    "/home",
+    "/post-list"
+  ]
+}
