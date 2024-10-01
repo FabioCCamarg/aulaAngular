@@ -1,0 +1,8 @@
+<div class="container">
+<h5>Bem-Vindo(a) a Loja!</h5>
+<button class="btn btn-secondary" (click)="showBanner = !showBanner">{{ showBanner ? "Mostrar":"Ocultar" }}</button>
+<br>
+<span *ngIf="showBanner">
+  <img src="https://img.freepik.com/vetores-premium/banner-de-venda-de-verao_78532-346.jpg?w=740" alt="">
+</span>
+</div>

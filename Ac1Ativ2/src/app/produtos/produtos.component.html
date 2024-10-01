@@ -1,0 +1,41 @@
+<div class="container text-center">
+  <h1>Produtos</h1>
+
+  <!-- Verifica se tem produtos disponíveis -->
+<span *ngIf="produtos.length == 0">
+  <p>
+    "Nenhum produto disponível no momento"
+</p>
+</span>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Preço</th>
+      <th>Descrição</th>
+      <th></th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let produto of produtos">
+
+      <td> {{ produto.nome }}</td>
+      <td>{{ produto.preco }}</td>
+      <td>{{ produto.descricao }}</td>
+
+      <td>
+        <button
+        class="btn btn-primary"
+        [ngClass]="{
+          'btn-disponivel': produto.emEstoque == true,
+          'btn-indisponivel': produto.emEstoque === false,
+        }">Comprar
+        </button>
+        </td>
+    </tr>
+  </tbody>
+</table>
+</div>

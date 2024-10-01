@@ -1,0 +1,19 @@
+.btn-disponivel{
+  background-color: rgba(14, 243, 14, 0.952);
+  border: 2px solid rgba(14, 243, 14, 0.952);
+  opacity: 1;
+  color: white;
+}
+
+.btn-disponivel:hover {
+  opacity: .8;
+}
+
+.btn-indisponivel {
+  color: white;
+  background-color: rgb(134, 134, 134);
+  cursor:default;
+  border: none;
+  opacity: .7 ;
+}
+
