@@ -1,0 +1,30 @@
+<form #form="ngForm" (ngSubmit)="salvar(form)">
+  <div class="form-group">
+    <label class="form-label" for="name">Nome</label>
+    <input [(ngModel)]="cliente.nome" type="text" class="form-control" id="nome" name="nome" required>
+    <div *ngIf="form.submitted && form.controls['nome'].errors" class="error">
+      <div *ngIf="form.controls['nome'].errors['required']">Nome é
+        obrigatório</div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Celular</label>
+      <input [(ngModel)]="cliente.celular" type="text" class="form-control" id="celuar" name="celular" required>
+      <div *ngIf="form.submitted && form.controls['celular'].errors" class="error">
+        <div *ngIf="form.controls['celular'].errors['required']">Celular é
+          obrigatório</div>
+
+      </div>
+
+      <div class="form-group">
+        <label for="name">E-mail</label>
+        <input [(ngModel)]="cliente.email" type="email" class="form-control" id="email" name="email" required>
+        <div *ngIf="form.submitted && form.controls['email'].errors" class="error">
+          <div *ngIf="form.controls['email'].errors['email']">E-mail é
+            inválido</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</form>

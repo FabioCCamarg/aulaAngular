@@ -1,0 +1,20 @@
+<form [formGroup]="form" (ngSubmit)="salvar()">
+
+  <label class="form-label">Nome</label>
+  <input type="text" class="form-control" formControlName="nome">
+  <div *ngIf="form.get('nome')?.invalid && (form.get('nome')?.dirty || form.get('nome')?.touched)">
+    <div class="error" *ngIf="form.get('nome')?.errors?.['required']">Nome é obrigatório!</div>
+  </div>
+
+  <label class="form-label">Celular</label>
+  <input type="text" class="form-control" formControlName="celular">
+
+  <label class="form-label">E-mail</label>
+  <input type="text" class="form-control" formControlName="email">
+  <div class="error" *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)">
+    <div *ngIf="form.get('email')?.errors?.['required']">E-mail é obrigatório!</div>
+  </div>
+
+  <button [disabled]="!form.valid" type="submit" class="btn btn-primary">Salvar</button>
+
+</form>
